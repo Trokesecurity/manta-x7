@@ -1,0 +1,35 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/README.md b/README.md
+index 4a43f3339ca591a7711fb718e1445a71443f1297..18ec3c8a2b6467c9c13082b3d9a7c260cf638db5 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,25 @@
+ # war-drone
+-simulador drone subaquatico
++Simulador/jogo educativo em 3D para web com foco em preservação ambiental.
++
++## Jogo: Caça ao Pirarucu (Amazônia, Brasil)
++Este projeto agora inclui um protótipo jogável em navegador (mobile e desktop) no tema **caça ao pirarucu fora do ecossistema amazônico**.
++
++### Objetivo educativo
++- Identificar e remover pirarucus em ambientes fora da Amazônia (alvos vermelhos).
++- Evitar captura de espécies nativas locais (peixes azuis).
++- Aprender sobre equilíbrio ecológico com quiz rápido integrado.
++
++### Como jogar
++1. Abra `index.html` em um navegador moderno.
++2. **Desktop:** use `WASD`/setas para mover e `Espaço` para capturar.
++3. **Mobile:** use os botões direcionais e o botão **Capturar**.
++4. Capture apenas os alvos corretos para pontuar e avançar de nível.
++
++### Estrutura
++- `index.html`: layout e interface do jogo.
++- `styles.css`: estilo responsivo para mobile e PC.
++- `src/game.js`: lógica do jogo 3D (Three.js), HUD, níveis e quiz.
+ 
+ ## Dados MVP Brasil (pt-BR)
+ - Arquivo de configuração inicial: `data/mvp-br-0.1.pt-BR.json`
+ - Inclui biome pack da Mata Atlântica, catálogo de espécies/ambiente, missões e regras de pontuação.
+ 
+EOF
+)
